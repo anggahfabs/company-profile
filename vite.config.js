@@ -16,7 +16,7 @@ export default defineConfig({
     strictPort: false,
     // pakai allowedHosts sebagai array wildcard
     allowedHosts: [
-      'c8d0ffbb8e54.ngrok-free.app',    // semua subdomain ngrok
+      'ed67386f21b4.ngrok-free.app',    // semua subdomain ngrok
       'localhost'
     ],
   },

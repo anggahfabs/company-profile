@@ -71,13 +71,13 @@
             <option v-for="t in types" :key="t" :value="t">{{ t }}</option>
           </select>
 
-          <select
+          <!-- <select
             v-model="filterDivision"
             class="w-full sm:w-auto px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer"
           >
             <option value="">Semua Divisi</option>
             <option v-for="d in divisions" :key="d" :value="d">{{ d }}</option>
-          </select>
+          </select> -->
         </div>
 
         <!-- GRID -->
