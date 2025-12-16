@@ -289,13 +289,13 @@
 
             <div class="group">
               <label class="block text-sm font-semibold text-slate-700 mb-2">
-                Perkiraan Tanggal & Lokasi
+                Perkiraan Lokasi & Waktu Acara
               </label>
               <input
                 type="text"
                 v-model="form.event_info"
                 class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 hover:border-slate-400"
-                placeholder="Misal: Mei 2025 · Jakarta"
+                placeholder="Misal: Jakarta - Mei 2025"
                 required
               />
             </div>
