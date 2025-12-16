@@ -117,12 +117,12 @@
               <ChatBubbleLeftRightIcon class="w-5 h-5" />
               <span v-if="!collapsed">Pesan Pengunjung</span>
               <!-- BADGE JUMLAH PESAN -->
-  <span
-    v-if="!collapsed"
-    class="ml-auto text-xs bg-red-500 text-white px-2 py-0.5 rounded-full"
-  >
-    3
-  </span>
+              <span
+                v-if="!collapsed && messageCount > 0"
+                class="ml-auto text-xs bg-red-500 text-white px-2 py-0.5 rounded-full"
+              >
+                {{ messageCount }}
+              </span>
             </RouterLink>
             <!-- <RouterLink
               to="/admin/footer-services"
@@ -179,6 +179,7 @@ import {
 
 import { ref, watch, onMounted } from "vue";
 import { useRoute } from "vue-router";
+import API from "@/services/api";
 
 export default {
   components: {
@@ -202,6 +203,7 @@ export default {
   setup() {
     const collapsed = ref(false);
     const accordion = ref({ content: false, settings: false });
+    const messageCount = ref(0);
 
     const route = useRoute();
 
@@ -251,7 +253,28 @@ export default {
       accordion.value[section] = !accordion.value[section];
     };
 
-    return { collapsed, accordion, toggleCollapse, toggleAccordion };
+    const fetchMessageCount = async () => {
+      try {
+        const res = await API.get("/admin/messages/count");
+        messageCount.value = res.data.total;
+      } catch (err) {
+        console.error("Gagal ambil jumlah pesan", err);
+      }
+    };
+    onMounted(() => {
+      const saved = localStorage.getItem("sidebar_collapsed");
+      if (saved !== null) collapsed.value = JSON.parse(saved);
+
+      fetchMessageCount(); // 🔥 TAMBAH INI
+    });
+
+    return {
+      collapsed,
+      accordion,
+      toggleCollapse,
+      toggleAccordion,
+      messageCount,
+    };
   },
 };
 </script>
