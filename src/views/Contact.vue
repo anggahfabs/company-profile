@@ -220,8 +220,10 @@
                 </label>
                 <input
                   type="text"
+                  v-model="form.name"
                   class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 hover:border-slate-400"
                   placeholder="Nama Anda"
+                  required
                 />
               </div>
 
@@ -231,8 +233,10 @@
                 </label>
                 <input
                   type="email"
+                  v-model="form.email"
                   class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 hover:border-slate-400"
                   placeholder="email@company.com"
+                  required
                 />
               </div>
             </div>
@@ -244,8 +248,11 @@
                 </label>
                 <input
                   type="tel"
+                  v-model="form.phone"
                   class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 hover:border-slate-400"
-                  placeholder="+62 ..."
+                  placeholder="+62 123 4567 8901"
+                  @input="form.phone = form.phone.replace(/[^0-9+]/g, '')"
+                  required
                 />
               </div>
 
@@ -255,6 +262,7 @@
                 </label>
                 <input
                   type="text"
+                  v-model="form.company"
                   class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 hover:border-slate-400"
                   placeholder="Nama perusahaan"
                 />
@@ -265,7 +273,7 @@
               <label class="block text-sm font-semibold text-slate-700 mb-2">
                 Jenis Acara
               </label>
-              <select
+              <select v-model="form.event_type" required
                 class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 hover:border-slate-400 cursor-pointer"
               >
                 <option value="">Pilih jenis acara</option>
@@ -285,8 +293,10 @@
               </label>
               <input
                 type="text"
+                v-model="form.event_info"
                 class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 hover:border-slate-400"
                 placeholder="Misal: Mei 2025 · Jakarta"
+                required
               />
             </div>
 
@@ -296,6 +306,7 @@
               </label>
               <textarea
                 rows="4"
+                v-model="form.message"
                 class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 hover:border-slate-400 resize-none"
                 placeholder="Ceritakan secara singkat konsep acara, jumlah tamu, dan kebutuhan khusus lainnya."
               ></textarea>
@@ -303,6 +314,7 @@
 
             <button
               type="button"
+  @click="submitForm"
               class="group w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-base font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
             >
               <span>Kirim Pesan</span>
@@ -349,6 +361,7 @@
 </template>
 
 <script>
+import Swal from "sweetalert2";
 import { ref, onMounted } from "vue";
 import API from "@/services/api";
 import Navbar from "../components/Navbar.vue";
@@ -397,9 +410,96 @@ export default {
       fetchContactInfo();
     });
 
-    return {
-      contactInfo
+    // tambahan
+    const form = ref({
+  name: "",
+  email: "",
+  phone: "",
+  company: "",
+  event_type: "",
+  event_info: "",
+  message: ""
+});
+
+const submitForm = async () => {
+  // REGEX VALIDATION
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[+0-9]+$/;
+
+  // VALIDASI WAJIB (kecuali company)
+  if (
+    !form.value.name ||
+    !form.value.email ||
+    !form.value.phone ||
+    !form.value.event_type ||
+    !form.value.event_info ||
+    !form.value.message
+  ) {
+    Swal.fire({
+      icon: "warning",
+      title: "Form belum lengkap",
+      text: "Semua field wajib diisi kecuali perusahaan.",
+    });
+    return;
+  }
+
+  // VALIDASI EMAIL
+  if (!emailRegex.test(form.value.email)) {
+    Swal.fire({
+      icon: "error",
+      title: "Email tidak valid",
+      text: "Masukkan email dengan format yang benar (contoh: email@domain.com)",
+    });
+    return;
+  }
+
+  // VALIDASI PHONE
+  if (!phoneRegex.test(form.value.phone)) {
+    Swal.fire({
+      icon: "error",
+      title: "Nomor telepon tidak valid",
+      text: "Nomor telepon hanya boleh berisi angka dan tanda +",
+    });
+    return;
+  }
+
+  try {
+    await API.post("/contact-message", form.value);
+
+    Swal.fire({
+      icon: "success",
+      title: "Pesan terkirim 🎉",
+      text: "Terima kasih, tim kami akan menghubungi Anda segera.",
+      timer: 2500,
+      showConfirmButton: false,
+    });
+
+    // reset form
+    form.value = {
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      event_type: "",
+      event_info: "",
+      message: "",
     };
+  } catch (error) {
+    Swal.fire({
+      icon: "error",
+      title: "Gagal mengirim pesan",
+      text: "Terjadi kesalahan, silakan coba lagi.",
+    });
+    console.error(error);
+  }
+};
+
+
+    return {
+  contactInfo,
+  form,
+  submitForm
+};
   }
 };
 </script>

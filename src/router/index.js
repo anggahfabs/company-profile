@@ -14,6 +14,7 @@ import ServicesAdmin from '@/views/Admin/ServicesAdmin.vue'
 import ProjectsAdmin from '@/views/Admin/ProjectsAdmin.vue'
 import TeamAdmin from '@/views/Admin/TeamAdmin.vue'
 import ContactAdmin from '@/views/Admin/ContactAdmin.vue'
+import AdminMessages from '@/views/Admin/MessagesAdmin.vue'
 import SosmedAdmin from '@/views/Admin/SosmedAdmin.vue'
 import MapsAdmin from '@/views/Admin/MapsAdmin.vue'
 
@@ -38,6 +39,12 @@ const routes = [
   { path: '/admin/projects', component: ProjectsAdmin },
   { path: '/admin/team', component: TeamAdmin },
   { path: '/admin/contact', component: ContactAdmin },
+  {
+  path: "/admin/messages",
+  component: AdminMessages,
+  meta: { requiresAuth: true, role: "admin" }
+},
+
   { path: '/admin/sosmed', component: SosmedAdmin },
   { path: '/admin/maps', component: MapsAdmin },
 ]
