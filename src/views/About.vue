@@ -7,10 +7,7 @@
       class="pt-32 pb-16 left-1/2 right-1/2 w-screen -translate-x-1/2 relative bg-gradient-to-br from-slate-50 via-white to-sky-50 overflow-hidden"
     >
       <!-- Decorative elements -->
-      <div
-        class="pointer-events-none absolute inset-0 opacity-40"
-        aria-hidden="true"
-      >
+      <div class="pointer-events-none absolute inset-0 opacity-40" aria-hidden="true">
         <div
           class="absolute -top-20 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-sky-100 to-transparent blur-3xl"
         ></div>
@@ -22,27 +19,34 @@
         ></div>
       </div>
 
-      <div class="max-w-7xl mx-auto px-4 relative">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 border border-sky-100 mb-6">
-          <div class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></div>
-          <p class="text-xs uppercase tracking-[0.25em] text-sky-700 font-medium">
-            Tentang Kami
-          </p>
-        </div>
-        
-        <h1
-          class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-slate-900 leading-tight max-w-4xl"
-        >
-          Agency event yang fokus pada 
-          <span class="bg-gradient-to-r from-sky-600 to-amber-500 bg-clip-text text-transparent">eksekusi rapi</span> 
-          dan pengalaman berkesan.
-        </h1>
-        <p class="text-base md:text-lg text-slate-600 max-w-3xl leading-relaxed">
-          Kami membantu brand dan organisasi mewujudkan acara yang tidak hanya
-          indah secara visual, tapi juga kuat secara pesan dan terukur
-          dampaknya.
-        </p>
-      </div>
+      <div class="max-w-7xl mx-auto px-4 relative text-center">
+  <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 border border-sky-100 mb-6 mx-auto">
+    <div class="w-4 h-4 rounded-full bg-sky-600 animate-pulse"></div>
+    <p class="text-xs uppercase tracking-[0.25em] text-sky-700 font-medium">
+      Tentang Kami
+    </p>
+  </div>
+
+  <h1
+    class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-slate-900 leading-tight max-w-4xl mx-auto"
+  >
+    Agency event yang fokus pada
+    <span
+      class="bg-gradient-to-r from-sky-600 to-amber-500 bg-clip-text text-transparent"
+    >
+      eksekusi rapi
+    </span>
+    dan pengalaman berkesan.
+  </h1>
+
+  <p
+    class="text-base md:text-lg text-slate-600 max-w-3xl leading-relaxed mx-auto"
+  >
+    Kami membantu brand dan organisasi mewujudkan acara yang tidak hanya
+    indah secara visual, tapi juga kuat secara pesan dan terukur dampaknya.
+  </p>
+</div>
+
     </section>
 
     <!-- VISI MISI & VALUES -->
