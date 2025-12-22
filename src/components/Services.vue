@@ -10,15 +10,15 @@
               d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
               clip-rule="evenodd" />
           </svg>
-          <span class="text-xs uppercase tracking-wider text-slate-700 font-semibold">Layanan</span>
+          <span class="text-xs uppercase tracking-wider text-slate-700 font-semibold">Services</span>
         </div>
 
         <h2
           class="text-4xl md:text-5xl font-bold mb-4 tracking-tight bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
-          Layanan Kami
+          Our Services
         </h2>
         <p class="text-base text-slate-600 max-w-2xl mx-auto">
-          Solusi lengkap untuk setiap kebutuhan event Anda, dari perencanaan hingga eksekusi
+          Complete solutions for every event need, from planning to execution
         </p>
       </div>
 
@@ -42,7 +42,7 @@
 
               <div class="flex items-center gap-2 text-sky-600 group-hover:text-sky-700 transition-colors duration-300">
                 <span class="text-[11px] font-semibold tracking-wide">
-                  Lihat detail
+                  View details
                 </span>
                 <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none"
                   stroke="currentColor" viewBox="0 0 24 24">
@@ -65,15 +65,15 @@
           class="inline-flex flex-col sm:flex-row items-center gap-4 p-8 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl shadow-2xl border border-slate-700">
           <div class="flex-1 text-left">
             <h3 class="text-2xl font-bold text-white mb-2">
-              Tidak menemukan yang Anda cari?
+              Didn't find what you're looking for?
             </h3>
             <p class="text-slate-300 text-sm">
-              Hubungi kami untuk solusi custom yang sesuai dengan kebutuhan acara Anda
+              Contact us for custom solutions tailored to your event needs
             </p>
           </div>
           <router-link to="/contact"
             class="group flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
-            <span>Konsultasi Gratis</span>
+            <span>Free Consultation</span>
             <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
               stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -105,7 +105,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            Yang Kami Sediakan
+            What We Provide
           </h4>
           <ul class="space-y-3">
             <li v-for="(point, idx) in activeService.points" :key="point"
@@ -127,7 +127,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
           </svg>
-          <span>Konsultasi dengan Tim</span>
+          <span>Consult with Team</span>
         </router-link>
       </template>
     </BaseModal>
@@ -166,7 +166,7 @@ const fetchServices = async () => {
       title: service.title,
       short: service.description || service.desc || "",
       tagline: service.description || "",
-      badge: "Layanan",
+      badge: "Service",
       long: service.description || "",
       points: []
     }));
@@ -179,24 +179,24 @@ const fetchServices = async () => {
         id: "event-planning",
         icon: "🎉",
         title: "Event Planning",
-        short: "Konsep, timeline, dan manajemen acara dari awal sampai akhir.",
-        tagline: "Dari brief sampai rundown final, semua terstruktur rapi.",
-        badge: "Perencanaan",
-        long: "Kami membantu Anda menyusun tujuan acara, konsep kreatif, budget, hingga rundown detail.",
+        short: "Concept, timeline, and event management from start to finish.",
+        tagline: "From brief to final rundown, everything is structured neatly.",
+        badge: "Planning",
+        long: "We help you determine event goals, creative concepts, budget, down to detailed rundowns.",
         points: [
-          "Penyusunan konsep dan narasi event",
-          "Pembuatan timeline & master rundown",
-          "Koordinasi dengan vendor dan internal team",
+          "Event concept and narrative creation",
+          "Timeline & master rundown creation",
+          "Coordination with vendors and internal team",
         ],
       },
       {
         id: "production-av",
         icon: "🎤",
         title: "Production & AV",
-        short: "Sound, lighting, dan staging profesional untuk semua skala acara.",
-        tagline: "Produksi teknis yang stabil dan aman sepanjang acara.",
-        badge: "Produksi",
-        long: "Kami menyediakan dan mengelola kebutuhan teknis seperti sound system, lighting, LED screen.",
+        short: "Professional sound, lighting, and staging for all event scales.",
+        tagline: "Stable and safe technical production throughout the event.",
+        badge: "Production",
+        long: "We provide and manage technical needs such as sound systems, lighting, and LED screens.",
         points: [
           "Sound system & mixing",
           "Lighting design",

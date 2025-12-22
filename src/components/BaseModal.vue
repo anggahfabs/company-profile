@@ -1,13 +1,6 @@
 <template>
-  <div
-    v-if="modelValue"
-    class="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 px-4"
-  >
-    <div
-      class="w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden"
-      role="dialog"
-      aria-modal="true"
-    >
+  <div v-if="modelValue" class="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 px-4">
+    <div class="w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden" role="dialog" aria-modal="true">
       <header class="px-6 pt-5 pb-3 border-b flex items-start justify-between">
         <div>
           <h3 class="text-lg font-semibold text-slate-900">
@@ -17,12 +10,9 @@
             <slot name="subtitle">{{ subtitle }}</slot>
           </p>
         </div>
-        <button
-          type="button"
+        <button type="button"
           class="ml-3 rounded-full w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition"
-          @click="close"
-          aria-label="Tutup dialog"
-        >
+          @click="close" aria-label="Close dialog">
           ✕
         </button>
       </header>
@@ -31,10 +21,7 @@
         <slot />
       </section>
 
-      <footer
-        v-if="$slots.footer"
-        class="px-6 py-4 border-t bg-slate-50 flex items-center justify-end gap-2"
-      >
+      <footer v-if="$slots.footer" class="px-6 py-4 border-t bg-slate-50 flex items-center justify-end gap-2">
         <slot name="footer" />
       </footer>
     </div>
@@ -54,5 +41,3 @@ function close() {
   emit("update:modelValue", false);
 }
 </script>
-
-

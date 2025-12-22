@@ -34,14 +34,13 @@
 
         <h1
           class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-slate-900 leading-tight max-w-4xl mx-auto">
-          Layanan
+          Services
           <span class="bg-gradient-to-r from-sky-600 to-amber-500 bg-clip-text text-transparent">end-to-end</span>
-          untuk setiap jenis acara.
+          for every event type.
         </h1>
         <p class="text-base md:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          Dari perencanaan hingga eksekusi di hari-H, kami menangani seluruh
-          detail teknis dan kreatif sehingga Anda dapat fokus pada tamu dan
-          tujuan acara.
+          From planning to D-day execution, we handle all technical and creative details so you can focus on guests and
+          event goals.
         </p>
       </div>
     </section>
@@ -72,14 +71,13 @@
                 </svg>
               </div>
               <h2 class="text-2xl font-bold text-slate-900">
-                Cara Kami Bekerja
+                How We Work
               </h2>
             </div>
 
             <p class="text-sm md:text-base text-slate-600 mb-6 leading-relaxed">
-              Setiap proyek dimulai dari pemahaman tujuan bisnis dan experience
-              yang ingin diciptakan. Tim kami akan menyusun konsep, budget, dan
-              timeline yang realistis untuk Anda.
+              Every project starts with understanding business goals and the experience to be created. Our team will
+              structure a concept, budget, and realistic timeline for you.
             </p>
 
             <div class="space-y-4">
@@ -90,7 +88,7 @@
                     class="text-sm font-bold text-sky-600 group-hover:text-white transition-colors duration-300">1</span>
                 </div>
                 <div class="flex-1 pt-2">
-                  <p class="text-sm md:text-base text-slate-700 font-medium">Konsultasi kebutuhan acara</p>
+                  <p class="text-sm md:text-base text-slate-700 font-medium">Event requirements consultation</p>
                 </div>
               </div>
 
@@ -101,7 +99,7 @@
                     class="text-sm font-bold text-sky-600 group-hover:text-white transition-colors duration-300">2</span>
                 </div>
                 <div class="flex-1 pt-2">
-                  <p class="text-sm md:text-base text-slate-700 font-medium">Penyusunan konsep & estimasi budget</p>
+                  <p class="text-sm md:text-base text-slate-700 font-medium">Concept creation & budget estimation</p>
                 </div>
               </div>
 
@@ -112,7 +110,8 @@
                     class="text-sm font-bold text-sky-600 group-hover:text-white transition-colors duration-300">3</span>
                 </div>
                 <div class="flex-1 pt-2">
-                  <p class="text-sm md:text-base text-slate-700 font-medium">Detailing teknis & koordinasi vendor</p>
+                  <p class="text-sm md:text-base text-slate-700 font-medium">Technical detailing & vendor coordination
+                  </p>
                 </div>
               </div>
 
@@ -123,7 +122,7 @@
                     class="text-sm font-bold text-sky-600 group-hover:text-white transition-colors duration-300">4</span>
                 </div>
                 <div class="flex-1 pt-2">
-                  <p class="text-sm md:text-base text-slate-700 font-medium">Pre-event rehearsal (jika dibutuhkan)</p>
+                  <p class="text-sm md:text-base text-slate-700 font-medium">Pre-event rehearsal (if needed)</p>
                 </div>
               </div>
 
@@ -134,7 +133,7 @@
                     class="text-sm font-bold text-sky-600 group-hover:text-white transition-colors duration-300">5</span>
                 </div>
                 <div class="flex-1 pt-2">
-                  <p class="text-sm md:text-base text-slate-700 font-medium">Eksekusi hari-H & post-event report</p>
+                  <p class="text-sm md:text-base text-slate-700 font-medium">D-day execution & post-event report</p>
                 </div>
               </div>
             </div>
@@ -152,7 +151,7 @@
                 </svg>
               </div>
               <h3 class="text-2xl font-bold text-slate-900">
-                Cocok Untuk
+                Suitable For
               </h3>
             </div>
 
@@ -229,21 +228,21 @@
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
                     clip-rule="evenodd" />
                 </svg>
-                <span>Event Mendatang</span>
+                <span>Upcoming Event</span>
               </div>
 
               <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
-                Punya event dalam 1–2 bulan ke depan?
+                Have an event in the next 1–2 months?
               </h3>
               <p class="text-sm md:text-base text-slate-600 max-w-2xl leading-relaxed">
-                Kirimkan brief singkat kepada kami. Tim konsultan akan membantu
-                menyusun konsep dan estimasi tanpa biaya awal.
+                Send us a short brief. Our consultant team will help structure concepts and estimates without upfront
+                costs.
               </p>
             </div>
 
             <router-link to="/contact"
               class="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-sm md:text-base font-semibold text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 whitespace-nowrap">
-              <span>Diskusikan Proyek Anda</span>
+              <span>Discuss Your Project</span>
               <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
                 stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />

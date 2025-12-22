@@ -14,19 +14,20 @@
 
         <h2 data-aos="fade-up" data-aos-delay="100"
           class="text-4xl md:text-5xl font-bold mb-4 tracking-tight bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
-          Portfolio Acara
+          Event Portfolio
         </h2>
 
         <p data-aos="fade-up" data-aos-delay="200"
           class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-          Beberapa proyek terbaru yang telah kami kerjakan dengan penuh dedikasi
+          Some of our latest projects delivered with dedication
         </p>
       </div>
 
       <!-- Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         <div v-for="(p, i) in projects" :key="p.id" :data-aos="'zoom-in'" :data-aos-delay="i * 100"
-          class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 bg-slate-900 cursor-pointer border border-slate-700 hover:border-sky-500">
+          class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 bg-slate-900 cursor-pointer border border-slate-700 hover:border-sky-500"
+          @click="onProjectClick(p)">
           <div class="relative w-full h-56 md:h-64 lg:h-80 overflow-hidden">
             <!-- Image with zoom effect -->
             <img :src="p.image" :alt="p.title"
@@ -48,7 +49,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
-                <span class="text-white font-semibold text-sm">Lihat Detail</span>
+                <span class="text-white font-semibold text-sm">View Details</span>
               </div>
             </div>
 
@@ -98,7 +99,7 @@
       <div class="text-center" data-aos="fade-up" :data-aos-delay="projects.length * 100">
         <router-link to="/projects"
           class="group inline-flex items-center gap-3 bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold text-base">
-          <span>Lihat Semua Portfolio</span>
+          <span>View All Portfolio</span>
           <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none"
             stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -133,14 +134,52 @@
       </div>
     </div>
   </section>
+
+  <!-- Project Detail Modal -->
+  <BaseModal v-model="showModal" :title="selectedProject?.title" :subtitle="selectedProject?.eventType">
+    <div v-if="selectedProject" class="flex flex-col gap-6">
+      <!-- Image -->
+      <div class="rounded-xl overflow-hidden shadow-md aspect-video">
+        <img :src="selectedProject.image" :alt="selectedProject.title" class="w-full h-full object-cover" />
+      </div>
+
+      <!-- Details -->
+      <div>
+        <div class="flex items-start gap-2 text-slate-500 text-sm mb-4">
+          <svg class="w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span>{{ selectedProject.address }}</span>
+        </div>
+
+        <h4 class="text-lg font-bold text-slate-900 mb-2">Description</h4>
+        <p class="text-slate-600 leading-relaxed whitespace-pre-line">
+          {{ selectedProject.description || 'No description available for this project.' }}
+        </p>
+      </div>
+    </div>
+  </BaseModal>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+
 import API from "@/services/api";
+import BaseModal from "@/components/BaseModal.vue";
 
 const projects = ref([]);
 const loading = ref(true);
+
+const showModal = ref(false);
+const selectedProject = ref(null);
+
+function onProjectClick(project) {
+  selectedProject.value = project;
+  showModal.value = true;
+}
 
 // Fetch projects dari API
 const fetchProjects = async () => {
@@ -158,6 +197,7 @@ const fetchProjects = async () => {
         address: project.category || "Event Location",
         eventType: project.category || "Event",
         division: "Production & AV",
+        description: project.description,
       }));
     loading.value = false;
   } catch (err) {
@@ -171,6 +211,7 @@ const fetchProjects = async () => {
         address: "Hotel Merdeka, Jakarta",
         eventType: "Gala Dinner",
         division: "Production & AV",
+        description: "Annual Gala Dinner with a luxurious and elegant concept.",
       },
       {
         id: 2,
@@ -179,6 +220,7 @@ const fetchProjects = async () => {
         address: "Plaza Senayan, Jakarta",
         eventType: "Product Launch",
         division: "Stage & Lighting",
+        description: "Launch of the latest smartphone product with spectacular lighting.",
       },
       {
         id: 3,
@@ -187,6 +229,7 @@ const fetchProjects = async () => {
         address: "Villa Anggrek, Bandung",
         eventType: "Wedding",
         division: "Venue & Styling",
+        description: "Outdoor themed wedding with beautiful natural floral decorations.",
       },
     ];
     loading.value = false;

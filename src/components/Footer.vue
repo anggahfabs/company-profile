@@ -1,68 +1,63 @@
 <template>
   <!-- Full-bleed footer -->
-  <footer
-    class="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-[#0A1D56] text-white overflow-hidden"
-  >
+  <footer class="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-[#0A1D56] text-white overflow-hidden">
 
     <div class="max-w-7xl mx-auto px-4 relative">
       <!-- GRID UTAMA -->
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr] gap-12 items-start mb-8 pt-12"
-      >
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr] gap-12 items-start mb-8 pt-12">
         <!-- MAPS -->
         <div data-aos="fade-up" class="group">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+            <div
+              class="w-10 h-10 rounded-lg bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <h3 class="font-bold text-lg tracking-wide uppercase bg-gradient-to-r from-white to-sky-200 bg-clip-text text-transparent">
-              Lokasi Kami
+            <h3
+              class="font-bold text-lg tracking-wide uppercase bg-gradient-to-r from-white to-sky-200 bg-clip-text text-transparent">
+              Our Location
             </h3>
           </div>
-          
+
           <p class="text-sm text-white/80 mb-4 leading-relaxed">
             {{ contactInfo.address }}
           </p>
-          
+
           <div
-            class="w-full h-44 rounded-2xl overflow-hidden shadow-2xl ring-2 ring-white/10 hover:ring-sky-400/50 transition-all duration-300 transform hover:scale-[1.02] group-hover:shadow-sky-500/20"
-          >
+            class="w-full h-44 rounded-2xl overflow-hidden shadow-2xl ring-2 ring-white/10 hover:ring-sky-400/50 transition-all duration-300 transform hover:scale-[1.02] group-hover:shadow-sky-500/20">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.089948463968!2d112.730836!3d-7.234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sOffice!5e0!3m2!1sen!2sid!4v1700000000000"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+              width="100%" height="100%" style="border: 0" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
         <!-- DIVISI / SERVICES -->
         <div data-aos="fade-up" data-aos-delay="100" class="group">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+            <div
+              class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </div>
-            <h3 class="font-bold text-lg tracking-wide uppercase bg-gradient-to-r from-white to-amber-200 bg-clip-text text-transparent">
-              Layanan Kami
+            <h3
+              class="font-bold text-lg tracking-wide uppercase bg-gradient-to-r from-white to-amber-200 bg-clip-text text-transparent">
+              Our Services
             </h3>
           </div>
-          
+
           <ul class="space-y-3 text-sm text-white/80">
-            <li 
-              v-for="service in services" 
-              :key="service.id"
-              class="flex items-center gap-2 hover:text-sky-400 transition-colors duration-300 cursor-default group/item"
-            >
-              <svg class="w-4 h-4 text-sky-400 opacity-0 group-hover/item:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            <li v-for="service in services" :key="service.id"
+              class="flex items-center gap-2 hover:text-sky-400 transition-colors duration-300 cursor-default group/item">
+              <svg class="w-4 h-4 text-sky-400 opacity-0 group-hover/item:opacity-100 transition-opacity" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
               <span>{{ service.title }}</span>
             </li>
@@ -72,49 +67,58 @@
         <!-- CONTACT + WORKING HOURS -->
         <div data-aos="fade-up" data-aos-delay="150" class="group">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+            <div
+              class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
-            <h3 class="font-bold text-lg tracking-wide uppercase bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+            <h3
+              class="font-bold text-lg tracking-wide uppercase bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
               Contact
             </h3>
           </div>
-          
+
           <div class="space-y-3 text-sm text-white/80 mb-6">
-            <a :href="`mailto:${contactInfo.email}`" class="flex items-center gap-2 hover:text-sky-400 transition-colors duration-300 group/link">
+            <a :href="`mailto:${contactInfo.email}`"
+              class="flex items-center gap-2 hover:text-sky-400 transition-colors duration-300 group/link">
               <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               <span class="group-hover/link:underline">{{ contactInfo.email }}</span>
             </a>
-            <a :href="`tel:${contactInfo.phone.replace(/\s/g, '')}`" class="flex items-center gap-2 hover:text-sky-400 transition-colors duration-300 group/link">
+            <a :href="`tel:${contactInfo.phone.replace(/\s/g, '')}`"
+              class="flex items-center gap-2 hover:text-sky-400 transition-colors duration-300 group/link">
               <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
               <span class="group-hover/link:underline">{{ contactInfo.phone }}</span>
             </a>
           </div>
 
-          <div class="bg-white/5 rounded-xl p-4 backdrop-blur-sm border border-white/10 hover:border-sky-400/30 transition-colors duration-300">
+          <div
+            class="bg-white/5 rounded-xl p-4 backdrop-blur-sm border border-white/10 hover:border-sky-400/30 transition-colors duration-300">
             <div class="flex items-center gap-2 mb-3">
               <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <p class="font-semibold text-sm tracking-wide text-white/90">Working Hours</p>
             </div>
             <div class="space-y-2 text-xs text-white/70">
               <p class="flex justify-between">
-                <span>Senin – Jumat</span>
+                <span>Monday – Friday</span>
                 <span class="font-semibold text-white/90">{{ contactInfo.weekday_hours }}</span>
               </p>
               <p class="flex justify-between">
-                <span>Sabtu</span>
+                <span>Saturday</span>
                 <span class="font-semibold text-white/90">{{ contactInfo.saturday_hours }}</span>
               </p>
               <p class="flex justify-between">
-                <span>Minggu / Libur</span>
+                <span>Sunday / Holidays</span>
                 <span class="font-semibold text-sky-400">{{ contactInfo.sunday_hours }}</span>
               </p>
             </div>
@@ -124,48 +128,50 @@
         <!-- SOSMED + LEGAL -->
         <div data-aos="fade-up" data-aos-delay="200" class="group">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+            <div
+              class="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
               <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
               </svg>
             </div>
-            <h3 class="font-bold text-lg tracking-wide uppercase bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
+            <h3
+              class="font-bold text-lg tracking-wide uppercase bg-gradient-to-r from-white to-pink-200 bg-clip-text text-transparent">
               Social Media
             </h3>
           </div>
 
           <div class="flex items-center gap-3 mb-6 flex-wrap">
-            <a
-              v-for="social in socialMedia"
-              :key="social.id"
-              :href="social.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              :class="getSocialClass(social.platform)"
-              :aria-label="social.platform"
-            >
+            <a v-for="social in socialMedia" :key="social.id" :href="social.url" target="_blank"
+              rel="noopener noreferrer" :class="getSocialClass(social.platform)" :aria-label="social.platform">
               <component :is="getSocialIcon(social.platform)" />
             </a>
           </div>
 
           <div class="flex flex-wrap gap-3 text-xs text-white/70">
-            <a href="#" class="hover:text-sky-400 hover:underline transition-colors duration-300 flex items-center gap-1">
+            <a href="#"
+              class="hover:text-sky-400 hover:underline transition-colors duration-300 flex items-center gap-1">
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               <span>Terms</span>
             </a>
             <span class="text-white/30">•</span>
-            <a href="#" class="hover:text-sky-400 hover:underline transition-colors duration-300 flex items-center gap-1">
+            <a href="#"
+              class="hover:text-sky-400 hover:underline transition-colors duration-300 flex items-center gap-1">
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
               <span>Privacy</span>
             </a>
             <span class="text-white/30">•</span>
-            <a href="#" class="hover:text-sky-400 hover:underline transition-colors duration-300 flex items-center gap-1">
+            <a href="#"
+              class="hover:text-sky-400 hover:underline transition-colors duration-300 flex items-center gap-1">
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
               <span>Support</span>
             </a>
@@ -174,15 +180,13 @@
       </div>
 
       <!-- COPYRIGHT BAR -->
-      <div
-        class="border-t border-white/10 pt-6 pb-6 flex flex-col md:flex-row items-center justify-between gap-4"
-      >
+      <div class="border-t border-white/10 pt-6 pb-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="text-xs text-white/60 text-center md:text-left" data-aos="fade-up">
-          &copy; 2025 Eventify. All rights reserved. Made with 
-          <span class="inline-block text-red-400 animate-pulse">♥</span> 
+          &copy; 2025 Eventify. All rights reserved. Made with
+          <span class="inline-block text-red-400 animate-pulse">♥</span>
           in Jakarta
         </div>
-        
+
         <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="100">
           <div class="flex items-center gap-2 text-xs text-white/60">
             <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
@@ -254,7 +258,7 @@ export default {
     // Get social media icon component
     const getSocialIcon = (platform) => {
       const platformLower = platform.toLowerCase();
-      
+
       if (platformLower.includes('instagram')) {
         return () => h('svg', {
           xmlns: "http://www.w3.org/2000/svg",
@@ -314,7 +318,7 @@ export default {
     const getSocialClass = (platform) => {
       const platformLower = platform.toLowerCase();
       const baseClass = "group/social w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 hover:border-transparent transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg";
-      
+
       if (platformLower.includes('instagram')) {
         return `${baseClass} hover:bg-gradient-to-br hover:from-purple-500 hover:via-pink-500 hover:to-orange-400 hover:shadow-pink-500/50`;
       } else if (platformLower.includes('facebook')) {
@@ -347,18 +351,24 @@ export default {
 
 <style scoped>
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(20px, -20px) scale(1.05);
   }
 }
 
 @keyframes float-delayed {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(-30px, 20px) scale(1.1);
   }

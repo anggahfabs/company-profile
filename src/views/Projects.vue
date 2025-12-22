@@ -23,36 +23,26 @@
 
       <div class="max-w-7xl mx-auto px-4 relative text-center">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-50 border border-sky-100 mb-6">
-  <svg
-    class="w-4 h-4 text-sky-600"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M4 6h4v4H4V6zm6 0h4v4h-4V6zm6 0h4v4h-4V6z
-         M4 14h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"
-    />
-  </svg>
+          <svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h4v4H4V6zm6 0h4v4h-4V6zm6 0h4v4h-4V6z
+         M4 14h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z" />
+          </svg>
 
-  <p class="text-xs uppercase tracking-[0.25em] text-sky-700 font-medium">
-    Portfolio Page
-  </p>
-</div>
+          <p class="text-xs uppercase tracking-[0.25em] text-sky-700 font-medium">
+            Portfolio Page
+          </p>
+        </div>
 
 
         <h1
           class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-slate-900 leading-tight max-w-4xl mx-auto">
           Portfolio
-          <span class="bg-gradient-to-r from-sky-600 to-amber-500 bg-clip-text text-transparent">Jejak Karya</span>
-          Terbaik Kami
+          <span class="bg-gradient-to-r from-sky-600 to-amber-500 bg-clip-text text-transparent">Our Best</span>
+          Works
         </h1>
         <p class="text-base md:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          Jelajahi berbagai event yang telah kami sukseskan, dari corporate gathering hingga konser musik berskala
-          besar. Bukti nyata dedikasi kami dalam menghadirkan kualitas visual dan teknis terbaik.
+          Explore various events we have successfully delivered, from corporate gatherings to large-scale music
+          concerts. Tangible proof of our dedication in presenting the best visual and technical quality.
         </p>
       </div>
     </section>
@@ -85,13 +75,13 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
-            <input v-model="q" type="search" placeholder="Cari proyek..."
+            <input v-model="q" type="search" placeholder="Search projects..."
               class="w-full sm:w-64 pl-10 pr-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 shadow-sm hover:shadow-md" />
           </div>
 
           <select v-model="filterType"
             class="w-full sm:w-auto px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer">
-            <option value="">Semua Tipe</option>
+            <option value="">All Types</option>
             <option v-for="t in types" :key="t" :value="t">{{ t }}</option>
           </select>
         </div>
@@ -117,7 +107,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
-                  <span class="text-sm font-semibold">Lihat Detail</span>
+                  <span class="text-sm font-semibold">View Details</span>
                 </div>
               </div>
             </div>
@@ -163,8 +153,8 @@
                 d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900 mb-2">Tidak ada proyek ditemukan</h3>
-          <p class="text-slate-600">Coba ubah filter atau kata kunci pencarian Anda</p>
+          <h3 class="text-xl font-semibold text-slate-900 mb-2">No projects found</h3>
+          <p class="text-slate-600">Try changing filters or your search keywords</p>
         </div>
       </div>
     </section>
@@ -224,7 +214,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  Deskripsi Proyek
+                  Project Description
                 </h3>
                 <p class="text-slate-700 leading-relaxed">{{ selected.description }}</p>
               </div>
@@ -232,7 +222,7 @@
               <div class="mt-6 flex justify-end">
                 <button @click="close"
                   class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <span>Tutup</span>
+                  <span>Close</span>
                 </button>
               </div>
             </div>

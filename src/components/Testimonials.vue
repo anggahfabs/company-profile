@@ -2,53 +2,33 @@
   <div>
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
       <div>
-        <h2 class="text-xl font-semibold text-slate-900">Testimoni Klien</h2>
+        <h2 class="text-xl font-semibold text-slate-900">Client Testimonials</h2>
         <p class="text-xs md:text-sm text-slate-500 max-w-md">
-          Cerita singkat dari brand dan organisasi yang pernah bekerja bersama kami.
+          Short stories from brands and organizations that have worked with us.
         </p>
       </div>
       <div class="flex items-center gap-2 text-xs text-slate-400">
-        <button
-          type="button"
+        <button type="button"
           class="w-7 h-7 flex items-center justify-center rounded-full border border-slate-300 text-slate-600 hover:bg-slate-100"
-          @click="prev"
-          aria-label="Sebelumnya"
-        >
+          @click="prev" aria-label="Previous">
           ‹
         </button>
-        <button
-          type="button"
+        <button type="button"
           class="w-7 h-7 flex items-center justify-center rounded-full border border-slate-300 text-slate-600 hover:bg-slate-100"
-          @click="next"
-          aria-label="Berikutnya"
-        >
+          @click="next" aria-label="Next">
           ›
         </button>
       </div>
     </div>
 
     <div class="relative overflow-hidden">
-      <div
-        class="flex transition-transform duration-500"
-        :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
-      >
-        <div
-          v-for="(t, i) in testimonials"
-          :key="t.id"
-          class="w-full flex-shrink-0 pr-0 md:pr-6"
-        >
+      <div class="flex transition-transform duration-500" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+        <div v-for="(t, i) in testimonials" :key="t.id" class="w-full flex-shrink-0 pr-0 md:pr-6">
           <div
-            class="rounded-2xl bg-white shadow-[0_18px_45px_rgba(15,23,42,0.18)] border border-slate-100 p-5 md:p-6 flex flex-col md:flex-row gap-4 md:gap-6"
-          >
+            class="rounded-2xl bg-white shadow-[0_18px_45px_rgba(15,23,42,0.18)] border border-slate-100 p-5 md:p-6 flex flex-col md:flex-row gap-4 md:gap-6">
             <div
-              class="w-14 h-14 rounded-full bg-slate-100 flex items-center justify-center text-sm font-semibold text-slate-600 overflow-hidden"
-            >
-              <img
-                v-if="t.logo"
-                :src="t.logo"
-                :alt="t.client"
-                class="w-full h-full object-contain"
-              />
+              class="w-14 h-14 rounded-full bg-slate-100 flex items-center justify-center text-sm font-semibold text-slate-600 overflow-hidden">
+              <img v-if="t.logo" :src="t.logo" :alt="t.client" class="w-full h-full object-contain" />
               <span v-else>
                 {{ initials(t.client) }}
               </span>
@@ -70,15 +50,9 @@
       </div>
 
       <div class="mt-4 flex justify-center gap-2">
-        <button
-          v-for="(t, i) in testimonials"
-          :key="`dot-${t.id}`"
-          type="button"
-          class="w-2.5 h-2.5 rounded-full transition"
-          :class="i === currentIndex ? 'bg-slate-900' : 'bg-slate-300'"
-          @click="goTo(i)"
-          aria-label="Pilih testimoni"
-        ></button>
+        <button v-for="(t, i) in testimonials" :key="`dot-${t.id}`" type="button"
+          class="w-2.5 h-2.5 rounded-full transition" :class="i === currentIndex ? 'bg-slate-900' : 'bg-slate-300'"
+          @click="goTo(i)" aria-label="Select testimonial"></button>
       </div>
     </div>
   </div>
@@ -104,8 +78,8 @@ const testimonials = [
     client: "PT Sukses Makmur",
     role: "Marketing Manager",
     quote:
-      "Tim sangat rapi dalam menyiapkan rundown dan koordinasi vendor. Eksekusi gala dinner berjalan on-time dan tanpa kendala berarti.",
-    eventType: "Gala Dinner Korporat",
+      "The team was very organized in preparing the rundown and coordinating vendors. The gala dinner execution ran on-time and without significant issues.",
+    eventType: "Corporate Gala Dinner",
     logo: "",
   },
   {
@@ -113,16 +87,16 @@ const testimonials = [
     client: "Brand X Phone",
     role: "Brand Lead",
     quote:
-      "Peluncuran produk terasa dinamis dan sesuai dengan positioning brand kami. Integrasi AV dan lighting sangat membantu storytelling di panggung.",
+      "The product launch felt dynamic and aligned with our brand positioning. AV and lighting integration greatly helped storytelling on stage.",
     eventType: "Product Launch",
     logo: "",
   },
   {
     id: 3,
-    client: "Komunitas Tech Summit",
+    client: "Tech Summit Community",
     role: "Event Director",
     quote:
-      "Mereka sangat responsif terhadap perubahan last-minute. Logistik dan alur peserta di venue terjaga dengan baik.",
+      "They were very responsive to last-minute changes. Logistics and participant flow at the venue were well maintained.",
     eventType: "Conference",
     logo: "",
   },
@@ -161,5 +135,3 @@ onBeforeUnmount(() => {
   if (timer) clearInterval(timer);
 });
 </script>
-
-
