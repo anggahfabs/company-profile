@@ -193,12 +193,13 @@ const fetchProjects = async () => {
         title: project.title,
         image: project.image?.startsWith('http')
           ? project.image
-          : `http://localhost:5000${project.image}`,
+          : `${import.meta.env.VITE_API_URL || "http://localhost:5000"}${project.image}`,
         address: project.category || "Event Location",
         eventType: project.category || "Event",
         division: "Production & AV",
         description: project.description,
       }));
+    loading.value = false;
     loading.value = false;
   } catch (err) {
     console.error("Error fetching projects:", err);
