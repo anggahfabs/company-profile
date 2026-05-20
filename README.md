@@ -36,7 +36,7 @@ URL Demo: https://youtu.be/JGtwrjso1EE
 ## ✅ Prerequisites
 
 - Git
-- Node.js (v16+ recommended) and npm or yarn
+- Node.js (v16+ recommended) and pnpm
 - MySQL or compatible (TiDB is also supported)
 
 ---
@@ -54,7 +54,7 @@ URL Demo: https://youtu.be/JGtwrjso1EE
 
    ```bash
    cd ../company-profile-backend
-   npm install
+   pnpm install
    ```
 
    - Create a `.env` file in `company-profile-backend/` with the following (example):
@@ -86,7 +86,7 @@ URL Demo: https://youtu.be/JGtwrjso1EE
    - Start the backend in development:
 
      ```bash
-     npm run dev
+    pnpm run dev
      ```
 
    - Verify the backend is running: open `http://localhost:5000/api/test-db`
@@ -95,7 +95,7 @@ URL Demo: https://youtu.be/JGtwrjso1EE
 
    ```bash
    cd ../company-profile
-   npm install
+   pnpm install
    ```
 
    - Optionally set API base URL in a `.env` (root of `company-profile/`):
@@ -107,7 +107,7 @@ URL Demo: https://youtu.be/JGtwrjso1EE
    - Start the frontend:
 
      ```bash
-     npm run dev
+    pnpm run dev
      ```
 
 4. Open the app
@@ -121,12 +121,12 @@ URL Demo: https://youtu.be/JGtwrjso1EE
 
 - Frontend
 
-  - `npm run dev` — start Vite dev server
-  - `npm run build` — build for production
+  - `pnpm run dev` — start Vite dev server
+  - `pnpm run build` — build for production
 
 - Backend
-  - `npm run dev` — start server with nodemon
-  - `npm start` — run server with node
+  - `pnpm run dev` — start server with nodemon
+  - `pnpm start` — run server with node
 
 ---
 
